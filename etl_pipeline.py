@@ -5,7 +5,7 @@ OUTPUT_FILE = "cleaned_ev_stations.csv"
 BASE_URL = "https://data.wa.gov/resource/f6w7-q2d2.json"
 
 print("Fetching data from Washington State Gov Open Data...")
-response = requests.get(f"{BASE_URL}?$limit=1000")
+response = requests.get(f"{BASE_URL}?$order=model_year DESC&$limit=1000")
 
 print(f"Server response code: {response.status_code}")
 data = response.json()
